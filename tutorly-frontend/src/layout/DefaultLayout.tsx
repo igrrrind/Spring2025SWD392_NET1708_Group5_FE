@@ -79,12 +79,12 @@ export default function Layout() {
               <div className="flex items-center gap-2">
                 <span className="text-sm">English, USD</span>
               </div>
-              {/* <Link
+              <Link
                 to="/login"
                 className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
               >
                 Log in
-              </Link> */}
+              </Link>
               <CustomDropdownMenu
                 menuItems={profileDropdownItems}
                 trigger={
@@ -106,7 +106,7 @@ export default function Layout() {
       {showDashboardNav && (
         <nav className="border-b">
           <div className="container mx-auto px-4">
-            <div className="flex h-14 items-center space-x-6 overflow-x-auto">
+            <div className="flex h-14 items-center space-x-2 overflow-x-auto">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 // const Icon = item.icon
@@ -115,14 +115,14 @@ export default function Layout() {
                     key={item.path}
                     to={item.path}
                     className={cn(
-                      "flex items-center gap-2 py-4 text-sm font-medium whitespace-nowrap",
+                      "flex items-center gap-2  py-1 text-sm font-medium whitespace-nowrap",
                       isActive
                         ? "border-b-2 border-pink-500"
-                        : "text-muted-foreground hover:text-primary"
+                        : "border-b-2 border-transparent text-muted-foreground hover:text-primary"
                     )}
                   >
                     {/* {/* <Icon className="h-4 w-4" /> */}
-                    {item.label}
+                    <div className="hover:bg-gray-100 py-3 px-2 rounded-xl transition">{item.label}</div>
                   </Link>
                 );
               })}
