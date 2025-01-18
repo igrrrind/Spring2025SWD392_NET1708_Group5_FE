@@ -80,7 +80,7 @@ export default function SignUpPage() {
       <p className="px-8 text-center text-sm text-muted-foreground">
         By clicking Continue or Sign up, you agree to{" "}
         <Link to="/terms" className="underline underline-offset-4 hover:text-primary">
-          Preply Terms of Use
+          Tutorly Terms of Use
         </Link>
         , including{" "}
         <Link to="/subscription-terms" className="underline underline-offset-4 hover:text-primary">

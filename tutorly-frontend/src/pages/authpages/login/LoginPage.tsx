@@ -85,7 +85,7 @@ export default function LoginPage() {
         </div>
       </div>
       <p className="px-8 text-center text-sm text-muted-foreground">
-        By clicking Log in or Continue with, you agree to Preply{" "}
+        By clicking Log in or Continue with, you agree to Tutorly{" "}
         <Link to="/terms" className="underline underline-offset-4 hover:text-primary">
           Terms of Use
         </Link>{" "}

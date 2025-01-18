@@ -22,8 +22,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const navItems = [
   { path: "/dashboard", label: "Home", icon: Home },
   { path: "/dashboard/messages", label: "Messages", icon: MessageSquare },
-  { path: "/dashboard/classes", label: "My classes", icon: BookOpen },
-  { path: "/dashboard/children", label: "My Children"},
+  { path: "/dashboard/my-classes", label: "My classes", icon: BookOpen },
+  { path: "/dashboard/my-children", label: "My Children"},
   { path: "/dashboard/calendar", label: "Calendar" },
   { path: "/dashboard/services", label: "Services" },
   { path: "/dashboard/teachers", label: "Teaching Staffs" },
@@ -35,8 +35,8 @@ const navItems = [
 
 const profileDropdownItems: MenuItem[] = [
   { path: "/dashboard/messages", label: "Messages" },
-  { path: "/dashboard/classes", label: "Classes" },
-  { path: "/dashboard/children", label: "My Children" },
+  { path: "/dashboard/my-classes", label: "Classes" },
+  { path: "/dashboard/my-children", label: "My Children" },
   { path: "/dashboard/calendar", label: "Calendar" },
   { path: "/dashboard/services", label: "Services" },
   { path: "/dashboard/teachers", label: "Teaching Staffs" },
@@ -117,7 +117,7 @@ export default function Layout() {
                     className={cn(
                       "flex items-center gap-2  py-1 text-sm font-medium whitespace-nowrap",
                       isActive
-                        ? "border-b-2 border-pink-500"
+                        ? "border-b-2 border-primary"
                         : "border-b-2 border-transparent text-muted-foreground hover:text-primary"
                     )}
                   >

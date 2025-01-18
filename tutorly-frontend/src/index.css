@@ -3,3 +3,27 @@
 @tailwind utilities;
 
 /* ... */
+:root {
+    --color-primary: #5436E0; /* Purple */
+    --color-primary-light: #A997FF; /* Lighter purple */
+    --color-primary-dark: #1E115A; /* Darker purple */
+  
+    --color-secondary: #f3e8ff; /* Soft lavender complementary color */
+  
+    --color-background: #ffffff; /* White background */
+    --color-background-dark: #1a202c; /* Dark mode background */
+  
+    --color-text: #1a202c; /* Dark text */
+    --color-text-muted: #718096; /* Muted text */
+    --font-primary: "Figtree", serif;
+
+  }
+  
+  .dark {
+    --color-background: #1a202c; /* Override for dark mode */
+    --color-text: #e2e8f0; /* Light text for dark mode */
+  }
+
+  body {
+    font-family: var(--font-primary);
+  }
