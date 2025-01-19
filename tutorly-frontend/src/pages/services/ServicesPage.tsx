@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Services</h1>
         <Button asChild>
-          <Link to="/dashboard/services/new">
+          <Link to="new">
             <Plus className="mr-2 h-4 w-4" />
             Create Service
           </Link>
@@ -29,9 +29,10 @@ export default function ServicesPage() {
         <TableHeader>
           <TableRow>
             <TableHead>Subject</TableHead>
-            <TableHead>About</TableHead>
+            <TableHead>Level</TableHead>
             <TableHead>Provider</TableHead>
-            <TableHead>Min. Price</TableHead>
+            <TableHead>Price per Hour</TableHead>
+            <TableHead>Age Range</TableHead>
             <TableHead>Success Rate</TableHead>
             <TableHead className="text-right">Action</TableHead>
           </TableRow>
@@ -42,16 +43,17 @@ export default function ServicesPage() {
               <TableCell className="font-medium">
                 {service.subject}
                 <Badge variant="outline" className="ml-2">
-                  Target: {service.targetScore}
+                  {service.level}
                 </Badge>
               </TableCell>
-              <TableCell className="max-w-md truncate">{service.about}</TableCell>
+              <TableCell>{service.level}</TableCell>
               <TableCell>{service.provider}</TableCell>
-              <TableCell>${service.priceMin}</TableCell>
+              <TableCell>${service.pricePerHour}/hour</TableCell>
+              <TableCell>{service.ageRange}</TableCell>
               <TableCell>{service.successRate}%</TableCell>
               <TableCell className="text-right">
                 <Button variant="ghost" asChild>
-                  <Link to={`/dashboard/services/${service.id}`}>View Details</Link>
+                  <Link to={`${service.id}`}>View Details</Link>
                 </Button>
               </TableCell>
             </TableRow>

@@ -39,8 +39,7 @@ export interface Student {
       endDate: "2024-05-30",
       students: [
         { id: "std-001", name: "Alice Johnson", email: "alice@example.com" },
-        { id: "std-002", name: "Bob Smith", email: "bob@example.com" },
-        { id: "std-003", name: "Charlie Brown", email: "charlie@example.com" },
+        
       ],
       lessons: [
         {
@@ -83,7 +82,7 @@ export interface Student {
       endDate: "2024-05-31",
       students: [
         { id: "std-004", name: "David Wilson", email: "david@example.com" },
-        { id: "std-005", name: "Eva Martinez", email: "eva@example.com" },
+       
       ],
       lessons: [
         {

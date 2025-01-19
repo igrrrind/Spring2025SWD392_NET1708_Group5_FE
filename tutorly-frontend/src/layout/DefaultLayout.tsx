@@ -8,6 +8,7 @@ import {
   UserCircle,
   Settings,
   EyeOff,
+  Facebook, Youtube 
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -149,9 +150,94 @@ export default function Layout() {
       )}
 
       {/* Main Content */}
-      <main>
+      <main className="min-h-screen">
         <Outlet />{" "}
       </main>
+      {/* Footer */}
+      <Footer/>
+      
+      
     </div>
   );
 }
+
+
+
+
+
+function Footer() {
+  return (
+    <footer className="px-12 mt-20 bg-gradient-to-b from-white to-primary">
+      <div className="container py-8 px-8 rounded-3xl rounded-b-none text-white  mx-auto bg-primary-dark">
+        {/* Footer Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold mb-2">Tutorly</h1>
+          <p className="text-sm">
+            Find tutors for any subject out there.
+            <br />
+            With Tutorly, every subject is possible.
+          </p>
+        </div>
+
+        {/* Footer Main Content */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* About Us Section */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">About Tutorly</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/about" className="hover:text-purple-400">About Us</Link></li>
+              <li><Link to="/faq" className="hover:text-purple-400">FAQ</Link></li>
+              <li><Link to="/terms" className="hover:text-purple-400">Terms of Service</Link></li>
+            </ul>
+          </div>
+
+          {/* Explore Section */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Explore</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/explore" className="hover:text-purple-400">Find Tutors</Link></li>
+              <li><Link to="/earn-money" className="hover:text-purple-400">Earn with Tutorly</Link></li>
+              <li><Link to="/blog" className="hover:text-purple-400">Tutorly Blog</Link></li>
+              <li><Link to="/join-us" className="hover:text-purple-400">Become a Tutor</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Section */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Contact</h3>
+            <ul className="space-y-2 text-sm">
+              <li>Hotline: <a href="tel:0938562745" className="hover:text-purple-400">0938 562 745</a> (Quang Dao)</li>
+              <li>Email: <a href="mailto:tutorly@gmail.com" className="hover:text-purple-400">tutorly@gmail.com</a></li>
+            </ul>       
+          </div>
+
+          {/* Social Media Icons */}
+          <div>
+              <h3 className="font-semibold text-lg mb-4">Connect With Us</h3>
+              <div className="flex gap-4">
+                <a href="#" className="hover:text-purple-400">
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a href="#" className="hover:text-purple-400">
+                  <Youtube className="h-6 w-6" />
+                </a>
+                {/* <a href="#" className="hover:text-purple-400">
+                  <Spotify className="h-6 w-6" />
+                </a> */}
+              </div>
+            </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-white/20 pt-4 mt-8 text-center text-sm text-white/70">
+          <p>© 2025 Tutorly. All rights reserved.</p>
+          <p>A team project by group 5</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+
+
+

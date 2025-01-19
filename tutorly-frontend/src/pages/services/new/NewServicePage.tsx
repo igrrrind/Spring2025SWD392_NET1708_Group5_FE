@@ -46,6 +46,11 @@ export default function NewServicePage() {
           <form className="space-y-6">
             <div className="grid gap-4">
               <div className="space-y-2">
+                <Label htmlFor="videoUrl">Service Title</Label>
+                <Input id="videoUrl" type="url" placeholder="Pitch your service title in 10 words or less" />
+              </div>
+
+              <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
                 <Select>
                   <SelectTrigger>
@@ -68,28 +73,20 @@ export default function NewServicePage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="videoUrl">Video URL</Label>
+                <Label htmlFor="videoUrl">Introduction Video</Label>
                 <Input id="videoUrl" type="url" placeholder="https://..." />
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="priceMin">Minimum Price ($)</Label>
+                  <Label htmlFor="priceMin">Price ($)</Label>
                   <Input id="priceMin" type="number" min="0" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="provider">Provider</Label>
-                  <Input id="provider" />
-                </div>
+                </div>                
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="successRate">Success Rate (%)</Label>
-                  <Input id="successRate" type="number" min="0" max="100" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="targetScore">Target IELTS Score</Label>
+                  <Label htmlFor="targetScore">Target (optional)</Label>
                   <Input id="targetScore" type="number" min="0" max="9" step="0.5" />
                 </div>
               </div>
@@ -169,7 +166,7 @@ export default function NewServicePage() {
 
               <div className="space-y-2">
                 <div className="flex justify-between items-center">
-                  <Label>Curriculum</Label>
+                  <Label>Curriculum Summary</Label>
                   <Button
                     type="button"
                     variant="outline"

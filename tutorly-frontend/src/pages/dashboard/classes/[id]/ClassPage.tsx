@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Clock, GraduationCap, Users } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Users } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -37,6 +37,7 @@ export default function ClassPage() {
               <div>
                 <Badge className="mb-2">{classItem.subject}</Badge>
                 <CardTitle className="text-2xl">{classItem.name}</CardTitle>
+                <p className="text-muted-foreground">Class Code: {classItem.classCode}</p>
               </div>
               <Badge variant={new Date(classItem.endDate) > new Date() ? "default" : "secondary"}>
                 {new Date(classItem.endDate) > new Date() ? "Active" : "Completed"}
@@ -53,10 +54,6 @@ export default function ClassPage() {
                 <div className="flex items-center text-muted-foreground">
                   <Clock className="mr-2 h-4 w-4" />
                   Duration: {new Date(classItem.startDate).toLocaleDateString()} - {new Date(classItem.endDate).toLocaleDateString()}
-                </div>
-                <div className="flex items-center text-muted-foreground">
-                  <GraduationCap className="mr-2 h-4 w-4" />
-                  Class Code: {classItem.classCode}
                 </div>
                 <div className="flex items-center text-muted-foreground">
                   <Users className="mr-2 h-4 w-4" />
@@ -112,6 +109,8 @@ export default function ClassPage() {
                   <TableHead>Title</TableHead>
                   <TableHead>Topic</TableHead>
                   <TableHead>Status</TableHead>
+                  <TableHead>Attendance</TableHead>
+                  <TableHead>Hours</TableHead>
                   <TableHead className="text-right">Action</TableHead>
                 </TableRow>
               </TableHeader>
@@ -130,6 +129,8 @@ export default function ClassPage() {
                         {lesson.status.charAt(0).toUpperCase() + lesson.status.slice(1)}
                       </Badge>
                     </TableCell>
+                    <TableCell>{lesson.status === 'completed' ? `${Math.floor(Math.random() * 3) + 3}/${classItem.students.length}` : '-'}</TableCell>
+                    <TableCell>{lesson.status === 'completed' ? '1.5' : '-'}</TableCell>
                     <TableCell className="text-right">
                       <Button variant="ghost">
                         {lesson.status === 'upcoming' ? 'Edit' : 'View Details'}
