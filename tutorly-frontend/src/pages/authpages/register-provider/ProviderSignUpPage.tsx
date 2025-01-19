@@ -8,10 +8,11 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { OAuthButtons } from "@/components/auth/oauth-buttons"
 import { AuthFormWrapper } from "../auth-form-wrapper"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function ProviderSignUpPage() {
   const [showPassword, setShowPassword] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <AuthFormWrapper title="Sign up as education organization">
@@ -70,7 +71,7 @@ export default function ProviderSignUpPage() {
               Remember me
             </label>
           </div>
-          <Button className="w-full bg-pink-500 hover:bg-pink-600">Sign up</Button>
+          <Button className="w-full bg-pink-500 hover:bg-pink-600" onClick={() => navigate("/provider-onboarding")}>Sign up</Button>
         </div>
       </div>
       <p className="px-8 text-center text-sm text-muted-foreground">

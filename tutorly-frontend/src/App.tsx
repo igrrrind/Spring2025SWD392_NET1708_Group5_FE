@@ -19,6 +19,7 @@ import ClientServicePage from "./pages/explore/[id]/ClientServicePage";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 import BookingConfirmationPage from "./pages/booking-confirmation/BookingConfirmationPage";
 import CreateNewClassPage from "./pages/dashboard/classes/new/NewClassPage";
+import OnboardingPage from "./pages/provider-onboarding/ProviderOnboardPage";
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
           <Route path="/provider" element={<BecomeProvider />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/booking-confirmation" element={<BookingConfirmationPage />} />
+          <Route path="/provider-onboarding" element={<OnboardingPage />} />
+
+
+
 
           {/* Dashboard routes */}
           <Route path="/dashboard/*" />
